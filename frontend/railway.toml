@@ -2,4 +2,4 @@
 builder = "RAILPACK"
 
 [deploy]
-startCommand = "npx serve dist --listen $PORT --no-clipboard"
+startCommand = "npx serve dist --single --listen $PORT --no-clipboard"
