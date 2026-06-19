@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #063a1f;
+  --accent: #d91a2a;
+  --sidebar: #0f2d1a;
+  --gold: #c9a84c;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a2e;
+  background: #f4f6f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #f4f6f9;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f9;
+  color: #1a1a2e;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(6, 58, 31, 0.2);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .admin-card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm;
+  }
+
+  .admin-label {
+    @apply mb-2 block text-sm font-medium text-slate-700;
+  }
+
+  .admin-input {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#063A1F] focus:ring-4 focus:ring-[#063A1F]/10;
+  }
+
+  .admin-button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#063A1F] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0a5c31] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .admin-button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-[#063A1F]/30 hover:bg-slate-50 hover:text-[#063A1F] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 220ms ease-out;
+}
