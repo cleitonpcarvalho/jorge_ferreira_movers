@@ -65,6 +65,7 @@ export default function Navbar() {
             className="h-auto w-[199px] sm:w-[239px]"
             style={{ height: 'auto' }}
             priority
+            loading="eager"
           />
         </Link>
 
