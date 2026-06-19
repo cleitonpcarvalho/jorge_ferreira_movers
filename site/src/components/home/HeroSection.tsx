@@ -82,6 +82,18 @@ export default function HeroSection({ content = {} }: Props) {
       className="relative overflow-hidden !py-0"
       bg="white"
     >
+      <div
+        className="absolute inset-0 md:hidden"
+        style={{
+          backgroundImage:
+            "url('/images/client/branded-van-front-residential.jpeg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-white/75" />
+      </div>
+
       <motion.div
         className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-primary opacity-[0.05] blur-[100px]"
         animate={
