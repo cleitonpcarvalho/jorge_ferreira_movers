@@ -36,6 +36,21 @@ export const metadata: Metadata = {
     title: 'Jorge Ferreira Movers — Mudanças Portugal e Reino Unido',
     description:
       'Mudanças internacionais e locais com confiança entre Portugal e o Reino Unido.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Jorge Ferreira Movers',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jorge Ferreira Movers — Mudanças Portugal e Reino Unido',
+    description:
+      'Mudanças internacionais e locais com confiança entre Portugal e o Reino Unido.',
+    images: ['/og-image.png'],
   },
 }
 
