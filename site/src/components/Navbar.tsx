@@ -23,6 +23,8 @@ export default function Navbar() {
       label: t.nav.international,
       href: '/mudancas-internacionais',
     },
+    { label: t.nav.personalOrganizer, href: '/personal-organizer' },
+    { label: t.nav.limpeza, href: '/limpeza-pos-mudanca' },
     { label: t.nav.contact, href: '/contacto' },
   ]
 
@@ -47,6 +49,10 @@ export default function Navbar() {
         hasScrolled && 'shadow-[0_2px_20px_rgba(0,0,0,0.08)]'
       )}
     >
+      <div className="flex h-9 w-full items-center justify-center bg-primary px-4 text-center font-body text-[11px] font-medium tracking-[0.15em] text-white sm:text-xs">
+        A UNIR DISTÂNCIAS DESDE 2016
+      </div>
+
       <nav
         className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8"
         aria-label="Navegação principal"

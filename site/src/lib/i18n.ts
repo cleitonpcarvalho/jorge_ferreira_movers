@@ -15,6 +15,8 @@ export const translations = {
     nav: {
       home: 'Início',
       international: 'Mudanças Internacionais',
+      personalOrganizer: 'Personal Organizer',
+      limpeza: 'Limpeza Pós Mudança',
       services: 'Serviços',
       about: 'Sobre Nós',
       contact: 'Contacto',
@@ -507,6 +509,8 @@ export const translations = {
     nav: {
       home: 'Home',
       international: 'International Moves',
+      personalOrganizer: 'Personal Organizer',
+      limpeza: 'Post-Move Cleaning',
       services: 'Services',
       about: 'About Us',
       contact: 'Contact',

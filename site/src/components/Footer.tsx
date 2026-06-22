@@ -23,6 +23,8 @@ export default function Footer() {
       label: t.nav.international,
       href: '/mudancas-internacionais',
     },
+    { label: t.nav.personalOrganizer, href: '/personal-organizer' },
+    { label: t.nav.limpeza, href: '/limpeza-pos-mudanca' },
     { label: t.nav.contact, href: '/contacto' },
   ]
 
