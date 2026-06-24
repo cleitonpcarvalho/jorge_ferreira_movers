@@ -212,7 +212,6 @@ export const translations = {
       what3: 'Obras de arte e objetos frágeis (embalagem especial)',
       what4: 'Volumes de escritório e equipamento de trabalho',
       what5: 'Caixas pessoais, roupas e pertences do dia-a-dia',
-      what6: 'Motas e bicicletas (mediante consulta)',
       routesTitle: 'As Nossas Rotas',
       routesTag: 'PT e UK',
       routesSubtitle:
@@ -247,6 +246,109 @@ export const translations = {
       heroImageAlt:
         'Carrinha Jorge Ferreira Movers numa rota internacional junto ao mar',
       transportImageAlt: 'Paletes embaladas para transporte internacional',
+    },
+    personalOrganizer: {
+      heroTag: 'Serviço Premium',
+      heroTitle: 'Da Caixa ao Lugar Certo.',
+      heroSubtitle:
+        'Não basta mudar — é preciso organizar. A nossa equipa de Personal Organizer transforma a sua nova casa num espaço funcional, arrumado e pronto a viver desde o primeiro dia.',
+      whatTag: 'O Que É',
+      whatTitle: 'Organização Profissional Ao Seu Lado',
+      whatSubtitle:
+        'O Personal Organizer vai além da mudança. É um serviço dedicado a quem quer começar a nova fase da vida com tudo no lugar certo.',
+      whatP1:
+        'Depois de uma mudança, a sensação de caos pode ser avassaladora. Caixas por todo o lado, objectos fora do sítio, não saber por onde começar. O nosso serviço de Personal Organizer existe precisamente para eliminar esse stress.',
+      whatP2:
+        'A nossa equipa especializada trabalha em conjunto consigo para categorizar, organizar e arrumar cada divisão da sua nova casa. Desde a cozinha até ao quarto das crianças — tudo fica no lugar certo, etiquetado e funcional.',
+      whatP3:
+        'É o serviço ideal para famílias, profissionais ocupados e qualquer pessoa que valorize o seu tempo e bem-estar.',
+      whatCta: 'Pedir Orçamento de Personal Organizer',
+      inclTag: 'O Que Inclui',
+      inclTitle: 'Um Serviço Completo de Organização',
+      card1Title: 'Triagem e Categorização',
+      card1Desc:
+        'Separamos e categorizamos todos os seus pertences por divisão, tipo e frequência de uso.',
+      card2Title: 'Etiquetagem Profissional',
+      card2Desc:
+        'Todas as caixas e pertences são etiquetados com clareza para facilitar a localização imediata.',
+      card3Title: 'Organização por Divisão',
+      card3Desc:
+        'Cozinha, sala, quartos, casa de banho — cada espaço é organizado de forma lógica e funcional.',
+      card4Title: 'Arrumação Final',
+      card4Desc:
+        'Não saímos antes de tudo estar no lugar. A sua casa fica pronta a habitar desde o primeiro momento.',
+      card5Title: 'Serviço Flexível',
+      card5Desc:
+        'Disponível antes, durante ou após a mudança. Adaptamos o serviço ao seu ritmo e necessidades.',
+      card6Title: 'Apoio Personalizado',
+      card6Desc:
+        'Trabalhamos ao seu ritmo, respeitando as suas preferências e o valor sentimental de cada objecto.',
+      galleryTag: 'O Nosso Trabalho',
+      galleryTitle: 'Resultados Que Falam Por Si',
+      gallerySubtitle: 'Cada espaço organizado é uma família mais tranquila.',
+      ctaTitle: 'Pronto Para Uma Casa Organizada Desde o Primeiro Dia?',
+      ctaSubtitle:
+        'Fale connosco e descubra como o Personal Organizer pode transformar a sua mudança numa experiência tranquila e organizada.',
+      ctaBtn1: 'Pedir Orçamento',
+      ctaBtn2: 'Falar no WhatsApp',
+      galleryImage1Alt: 'Personal Organizer a arrumar roupa num roupeiro',
+      galleryImage2Alt: 'Organização profissional de um roupeiro infantil',
+      galleryImage3Alt: 'Camisas organizadas por cor em cabides uniformes',
+      galleryImage4Alt: 'Coleção de sapatos organizada em prateleiras',
+      whatsappMessage:
+        'Olá! Gostaria de saber mais sobre o serviço de Personal Organizer.',
+    },
+    limpeza: {
+      heroTag: 'Limpeza Profissional',
+      heroTitle: 'A Sua Nova Casa, Impecável Desde o Primeiro Dia.',
+      heroSubtitle:
+        'Antes de entrar ou depois de sair — a nossa equipa de limpeza pós mudança deixa cada divisão brilhante, higienizada e pronta a receber a sua vida.',
+      preTitle: 'Limpeza Pré-Entrada',
+      preSubtitle: 'Para receber a sua nova casa nas melhores condições',
+      preItem1: 'Limpeza profunda de todas as divisões',
+      preItem2: 'Higienização de casas de banho e cozinha',
+      preItem3: 'Limpeza de janelas, vidros e caixilhos',
+      preItem4: 'Aspiração e lavagem de pavimentos',
+      preItem5: 'Remoção de resíduos da obra ou mudança anterior',
+      preCta: 'Pedir Orçamento →',
+      postTitle: 'Limpeza Pós-Saída',
+      postSubtitle: 'Deixe o espaço anterior em perfeitas condições',
+      postItem1: 'Limpeza geral para devolução do imóvel',
+      postItem2: 'Remoção de resíduos e objectos deixados',
+      postItem3: 'Limpeza de marcas nas paredes e rodapés',
+      postItem4: 'Higienização completa de casas de banho',
+      postItem5: 'Preparação do imóvel para nova visita ou arrendamento',
+      postCta: 'Pedir Orçamento →',
+      whyTag: 'Porque Escolher-nos',
+      whyTitle: 'Limpeza Profissional é Diferente',
+      why1Title: 'Rapidez e Eficiência',
+      why1Desc:
+        'Equipa treinada que executa o trabalho no menor tempo possível, sem comprometer a qualidade.',
+      why2Title: 'Produtos Certificados',
+      why2Desc:
+        'Utilizamos produtos de limpeza profissionais, seguros para crianças, animais e o meio ambiente.',
+      why3Title: 'Resultado Garantido',
+      why3Desc:
+        'Se não ficou perfeito, voltamos. A sua satisfação é a nossa prioridade.',
+      why4Title: 'Agendamento Flexível',
+      why4Desc:
+        'Disponível em qualquer dia, incluindo fins de semana e feriados. Adaptamo-nos ao seu calendário.',
+      whyCta: 'Agendar Limpeza',
+      galleryTag: 'Resultados Reais',
+      galleryTitle: 'Espaços Transformados',
+      ctaTitle: 'A Sua Casa Merece um Começo Impecável.',
+      ctaSubtitle:
+        'Contacte-nos hoje e receba um orçamento gratuito para limpeza pós mudança.',
+      ctaBtn1: 'Pedir Orçamento Gratuito',
+      ctaBtn2: 'Falar no WhatsApp',
+      image1Alt: 'Apartamento vazio, luminoso e impecavelmente limpo',
+      image2Alt: 'Profissional a limpar uma sala luminosa',
+      image3Alt: 'Cozinha de apartamento limpa e pronta a usar',
+      image4Alt: 'Sala vazia com pavimento limpo e luz natural',
+      image5Alt: 'Apartamento vazio com casa de banho higienizada',
+      ctaImageAlt: 'Sala vazia, limpa e pronta para uma nova mudança',
+      whatsappMessage:
+        'Olá! Gostaria de saber mais sobre o serviço de Limpeza Pós Mudança.',
     },
     about: {
       pageTitle: 'Sobre Nós',
@@ -705,7 +807,6 @@ export const translations = {
       what3: 'Artwork and fragile objects (special packing)',
       what4: 'Office contents and work equipment',
       what5: 'Personal boxes, clothes and everyday belongings',
-      what6: 'Motorcycles and bicycles (subject to consultation)',
       routesTitle: 'Our Routes',
       routesTag: 'PT and UK',
       routesSubtitle:
@@ -738,6 +839,109 @@ export const translations = {
       heroImageAlt:
         'Jorge Ferreira Movers van on an international route by the sea',
       transportImageAlt: 'Pallets packed for international transport',
+    },
+    personalOrganizer: {
+      heroTag: 'Premium Service',
+      heroTitle: 'From the Box to the Right Place.',
+      heroSubtitle:
+        'Moving is not enough — it needs to be organised. Our Personal Organizer team transforms your new home into a functional, tidy space ready to live in from day one.',
+      whatTag: 'What It Is',
+      whatTitle: 'Professional Organisation By Your Side',
+      whatSubtitle:
+        'Personal Organizer goes beyond the move. It is a service dedicated to those who want to start their new chapter with everything in the right place.',
+      whatP1:
+        'After a move, the feeling of chaos can be overwhelming. Boxes everywhere, things out of place, not knowing where to begin. Our Personal Organizer service exists precisely to eliminate that stress.',
+      whatP2:
+        "Our specialist team works alongside you to categorise, organise and arrange every room in your new home. From the kitchen to the children's bedroom — everything ends up in the right place, labelled and functional.",
+      whatP3:
+        'It is the ideal service for families, busy professionals and anyone who values their time and well-being.',
+      whatCta: 'Request a Personal Organizer Quote',
+      inclTag: 'What Is Included',
+      inclTitle: 'A Complete Organisation Service',
+      card1Title: 'Sorting and Categorising',
+      card1Desc:
+        'We sort and categorise all your belongings by room, type and frequency of use.',
+      card2Title: 'Professional Labelling',
+      card2Desc:
+        'All boxes and belongings are clearly labelled for immediate location.',
+      card3Title: 'Room by Room Organisation',
+      card3Desc:
+        'Kitchen, living room, bedrooms, bathroom — each space is organised logically and functionally.',
+      card4Title: 'Final Arrangement',
+      card4Desc:
+        'We do not leave until everything is in place. Your home is ready to live in from the very first moment.',
+      card5Title: 'Flexible Service',
+      card5Desc:
+        'Available before, during or after the move. We adapt the service to your pace and needs.',
+      card6Title: 'Personalised Support',
+      card6Desc:
+        'We work at your pace, respecting your preferences and the sentimental value of each item.',
+      galleryTag: 'Our Work',
+      galleryTitle: 'Results That Speak for Themselves',
+      gallerySubtitle: 'Every organised space means a calmer family.',
+      ctaTitle: 'Ready for an Organised Home From Day One?',
+      ctaSubtitle:
+        'Talk to us and discover how Personal Organizer can transform your move into a calm and organised experience.',
+      ctaBtn1: 'Get a Quote',
+      ctaBtn2: 'Chat on WhatsApp',
+      galleryImage1Alt: 'Personal Organizer arranging clothes in a wardrobe',
+      galleryImage2Alt: "Professional organisation of a children's wardrobe",
+      galleryImage3Alt: 'Shirts organised by colour on matching hangers',
+      galleryImage4Alt: 'Shoe collection organised on shelves',
+      whatsappMessage:
+        'Hello! I would like to learn more about the Personal Organizer service.',
+    },
+    limpeza: {
+      heroTag: 'Professional Cleaning',
+      heroTitle: 'Your New Home, Spotless From Day One.',
+      heroSubtitle:
+        'Before you move in or after you move out — our post-move cleaning team leaves every room gleaming, sanitised and ready for your new life.',
+      preTitle: 'Pre-Move-In Cleaning',
+      preSubtitle: 'Receive your new home in the best possible condition',
+      preItem1: 'Deep cleaning of all rooms',
+      preItem2: 'Sanitisation of bathrooms and kitchen',
+      preItem3: 'Cleaning of windows, glass and frames',
+      preItem4: 'Vacuuming and washing of floors',
+      preItem5: 'Removal of debris from previous works or move',
+      preCta: 'Get a Quote →',
+      postTitle: 'Post-Move-Out Cleaning',
+      postSubtitle: 'Leave the previous space in perfect condition',
+      postItem1: 'General cleaning for property handover',
+      postItem2: 'Removal of leftover items and debris',
+      postItem3: 'Cleaning of marks on walls and skirting boards',
+      postItem4: 'Full bathroom sanitisation',
+      postItem5: 'Property preparation for new viewing or tenancy',
+      postCta: 'Get a Quote →',
+      whyTag: 'Why Choose Us',
+      whyTitle: 'Professional Cleaning is Different',
+      why1Title: 'Speed and Efficiency',
+      why1Desc:
+        'Trained team that gets the job done in the shortest time possible without compromising quality.',
+      why2Title: 'Certified Products',
+      why2Desc:
+        'We use professional cleaning products that are safe for children, pets and the environment.',
+      why3Title: 'Guaranteed Results',
+      why3Desc:
+        'If it is not perfect, we come back. Your satisfaction is our priority.',
+      why4Title: 'Flexible Scheduling',
+      why4Desc:
+        'Available any day including weekends and bank holidays. We adapt to your calendar.',
+      whyCta: 'Schedule Cleaning',
+      galleryTag: 'Real Results',
+      galleryTitle: 'Transformed Spaces',
+      ctaTitle: 'Your Home Deserves a Spotless Start.',
+      ctaSubtitle:
+        'Contact us today and receive a free quote for post-move cleaning.',
+      ctaBtn1: 'Get a Free Quote',
+      ctaBtn2: 'Chat on WhatsApp',
+      image1Alt: 'Empty, bright and spotless apartment',
+      image2Alt: 'Professional cleaning a bright living room',
+      image3Alt: 'Clean apartment kitchen ready to use',
+      image4Alt: 'Empty living room with clean flooring and natural light',
+      image5Alt: 'Empty apartment with a sanitised bathroom',
+      ctaImageAlt: 'Empty, clean room ready for a new move',
+      whatsappMessage:
+        'Hello! I would like to learn more about the Post-Move Cleaning service.',
     },
     about: {
       pageTitle: 'About Us',

@@ -56,7 +56,6 @@ export default function InternationalMovesPageClient({
     text('what-we-move', 'item3', t.international.what3),
     text('what-we-move', 'item4', t.international.what4),
     text('what-we-move', 'item5', t.international.what5),
-    text('what-we-move', 'item6', t.international.what6),
   ]
 
   const routes = [

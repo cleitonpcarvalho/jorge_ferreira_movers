@@ -176,8 +176,7 @@ with section_data (page_slug, slug, title, content, order_num) as (
         "item2": "Eletrodomésticos e equipamentos",
         "item3": "Obras de arte e objetos frágeis (embalagem especial)",
         "item4": "Volumes de escritório e equipamento de trabalho",
-        "item5": "Caixas pessoais, roupas e pertences do dia-a-dia",
-        "item6": "Motas e bicicletas (mediante consulta)"
+        "item5": "Caixas pessoais, roupas e pertences do dia-a-dia"
       }$json$::jsonb,
       3
     ),

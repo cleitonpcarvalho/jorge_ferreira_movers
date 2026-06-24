@@ -31,72 +31,6 @@ interface Props {
   sections?: SectionsMap
 }
 
-const serviceCards: ServiceCard[] = [
-  {
-    icon: PackageCheck,
-    title: 'Triagem e Categorização',
-    description:
-      'Separamos e categorizamos todos os seus pertences por divisão, tipo e frequência de uso.',
-  },
-  {
-    icon: Tag,
-    title: 'Etiquetagem Profissional',
-    description:
-      'Todas as caixas e pertences são etiquetados com clareza para facilitar a localização imediata.',
-  },
-  {
-    icon: LayoutGrid,
-    title: 'Organização por Divisão',
-    description:
-      'Cozinha, sala, quartos, casa de banho — cada espaço é organizado de forma lógica e funcional.',
-  },
-  {
-    icon: Sparkles,
-    title: 'Arrumação Final',
-    description:
-      'Não saímos antes de tudo estar no lugar. A sua casa fica pronta a habitar desde o primeiro momento.',
-  },
-  {
-    icon: Clock,
-    title: 'Serviço Flexível',
-    description:
-      'Disponível antes, durante ou após a mudança. Adaptamos o serviço ao seu ritmo e necessidades.',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Apoio Personalizado',
-    description:
-      'Trabalhamos ao seu ritmo, respeitando as suas preferências e o valor sentimental de cada objecto.',
-  },
-]
-
-const galleryImages = [
-  {
-    src: '/images/personal-organizer/wardrobe-clothing-organisation.jpeg',
-    width: 1077,
-    height: 1076,
-    alt: 'Personal Organizer a arrumar roupa num roupeiro',
-  },
-  {
-    src: '/images/personal-organizer/childrens-wardrobe-organisation.jpeg',
-    width: 1069,
-    height: 1069,
-    alt: 'Organização profissional de um roupeiro infantil',
-  },
-  {
-    src: '/images/personal-organizer/colour-sorted-wardrobe.jpeg',
-    width: 1065,
-    height: 804,
-    alt: 'Camisas organizadas por cor em cabides uniformes',
-  },
-  {
-    src: '/images/personal-organizer/organised-shoe-storage.jpeg',
-    width: 1080,
-    height: 1070,
-    alt: 'Coleção de sapatos organizada em prateleiras',
-  },
-]
-
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
@@ -105,21 +39,81 @@ const cardVariants = {
 export default function PersonalOrganizerPageClient({
   sections = {},
 }: Props) {
-  const { lang } = useLang()
+  const { lang, t } = useLang()
   const contactHref = lang === 'pt' ? '/contacto' : '/contact'
   const heroContent = lang === 'pt' ? sections.hero : {}
+  const serviceCards: ServiceCard[] = [
+    {
+      icon: PackageCheck,
+      title: t.personalOrganizer.card1Title,
+      description: t.personalOrganizer.card1Desc,
+    },
+    {
+      icon: Tag,
+      title: t.personalOrganizer.card2Title,
+      description: t.personalOrganizer.card2Desc,
+    },
+    {
+      icon: LayoutGrid,
+      title: t.personalOrganizer.card3Title,
+      description: t.personalOrganizer.card3Desc,
+    },
+    {
+      icon: Sparkles,
+      title: t.personalOrganizer.card4Title,
+      description: t.personalOrganizer.card4Desc,
+    },
+    {
+      icon: Clock,
+      title: t.personalOrganizer.card5Title,
+      description: t.personalOrganizer.card5Desc,
+    },
+    {
+      icon: HeartHandshake,
+      title: t.personalOrganizer.card6Title,
+      description: t.personalOrganizer.card6Desc,
+    },
+  ]
+  const galleryImages = [
+    {
+      src: '/images/personal-organizer/wardrobe-clothing-organisation.jpeg',
+      width: 1077,
+      height: 1076,
+      alt: t.personalOrganizer.galleryImage1Alt,
+    },
+    {
+      src: '/images/personal-organizer/childrens-wardrobe-organisation.jpeg',
+      width: 1069,
+      height: 1069,
+      alt: t.personalOrganizer.galleryImage2Alt,
+    },
+    {
+      src: '/images/personal-organizer/colour-sorted-wardrobe.jpeg',
+      width: 1065,
+      height: 804,
+      alt: t.personalOrganizer.galleryImage3Alt,
+    },
+    {
+      src: '/images/personal-organizer/organised-shoe-storage.jpeg',
+      width: 1080,
+      height: 1070,
+      alt: t.personalOrganizer.galleryImage4Alt,
+    },
+  ]
   const whatsappUrl =
-    'https://wa.me/447796601194?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Personal%20Organizer.'
+    `https://wa.me/447796601194?text=${encodeURIComponent(
+      t.personalOrganizer.whatsappMessage
+    )}`
 
   return (
     <>
       <InnerPageHero
-        tag={contentText(heroContent, 'tag', 'Serviço Premium')}
-        title={contentText(heroContent, 'titulo', 'Da Caixa ao Lugar Certo.')}
+        tag={contentText(heroContent, 'tag', t.personalOrganizer.heroTag)}
+        title={contentText(heroContent, 'titulo', t.personalOrganizer.heroTitle)}
         subtitle={contentText(
           heroContent,
           'subtitulo',
-          'Não basta mudar — é preciso organizar. A nossa equipa de Personal Organizer transforma a sua nova casa num espaço funcional, arrumado e pronto a viver desde o primeiro dia.'
+          t.personalOrganizer.heroSubtitle
         )}
       />
 
@@ -132,33 +126,18 @@ export default function PersonalOrganizerPageClient({
             viewport={{ once: true, margin: '-100px' }}
           >
             <SectionHeading
-              tag="O Que É"
-              title="Organização Profissional Ao Seu Lado"
-              subtitle="O Personal Organizer vai além da mudança. É um serviço dedicado a quem quer começar a nova fase da vida com tudo no lugar certo — sem stress, sem confusão."
+              tag={t.personalOrganizer.whatTag}
+              title={t.personalOrganizer.whatTitle}
+              subtitle={t.personalOrganizer.whatSubtitle}
               align="left"
             />
             <div className="space-y-5 font-body text-[16px] leading-8 text-[#444]">
-              <p>
-                Depois de uma mudança, a sensação de caos pode ser
-                avassaladora. Caixas por todo o lado, objectos fora do sítio,
-                não saber por onde começar. O nosso serviço de Personal
-                Organizer existe precisamente para eliminar esse stress.
-              </p>
-              <p>
-                A nossa equipa especializada trabalha em conjunto consigo para
-                categorizar, organizar e arrumar cada divisão da sua nova casa.
-                Desde a cozinha até ao quarto das crianças — tudo fica no lugar
-                certo, etiquetado e funcional.
-              </p>
-              <p>
-                É o serviço ideal para famílias, profissionais ocupados e
-                qualquer pessoa que valorize o seu tempo e bem-estar.
-              </p>
+              <p>{t.personalOrganizer.whatP1}</p>
+              <p>{t.personalOrganizer.whatP2}</p>
+              <p>{t.personalOrganizer.whatP3}</p>
             </div>
             <div className="mt-8">
-              <CTAButton href={contactHref}>
-                Pedir Orçamento de Personal Organizer
-              </CTAButton>
+              <CTAButton href={contactHref}>{t.personalOrganizer.whatCta}</CTAButton>
             </div>
           </motion.div>
 
@@ -198,8 +177,8 @@ export default function PersonalOrganizerPageClient({
 
       <SectionWrapper id="o-que-inclui" bg="light">
         <SectionHeading
-          tag="O Que Inclui"
-          title="Um Serviço Completo de Organização"
+          tag={t.personalOrganizer.inclTag}
+          title={t.personalOrganizer.inclTitle}
         />
         <motion.div
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
@@ -232,9 +211,9 @@ export default function PersonalOrganizerPageClient({
 
       <SectionWrapper id="galeria-personal-organizer" bg="white">
         <SectionHeading
-          tag="O Nosso Trabalho"
-          title="Resultados Que Falam Por Si"
-          subtitle="Cada espaço organizado é uma família mais tranquila."
+          tag={t.personalOrganizer.galleryTag}
+          title={t.personalOrganizer.galleryTitle}
+          subtitle={t.personalOrganizer.gallerySubtitle}
         />
         <motion.div
           className="columns-1 gap-4 sm:columns-2 lg:columns-3"
@@ -297,15 +276,14 @@ export default function PersonalOrganizerPageClient({
           viewport={{ once: true, margin: '-100px' }}
         >
           <h2 className="font-heading text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
-            Pronto Para Uma Casa Organizada Desde o Primeiro Dia?
+            {t.personalOrganizer.ctaTitle}
           </h2>
           <p className="mx-auto mt-5 max-w-2xl font-body text-base leading-7 text-white/80 sm:text-lg">
-            Fale connosco e descubra como o Personal Organizer pode transformar
-            a sua mudança numa experiência tranquila e organizada.
+            {t.personalOrganizer.ctaSubtitle}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CTAButton href={contactHref} variant="white">
-              Pedir Orçamento
+              {t.personalOrganizer.ctaBtn1}
             </CTAButton>
             <CTAButton
               href={whatsappUrl}
@@ -314,7 +292,7 @@ export default function PersonalOrganizerPageClient({
               className="!border-white !text-white hover:!bg-white hover:!text-primary"
             >
               <MessageCircle size={19} />
-              Falar no WhatsApp
+              {t.personalOrganizer.ctaBtn2}
             </CTAButton>
           </div>
         </motion.div>

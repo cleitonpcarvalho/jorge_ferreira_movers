@@ -32,72 +32,6 @@ interface Props {
   sections?: SectionsMap
 }
 
-const preMoveItems = [
-  'Limpeza profunda de todas as divisões',
-  'Higienização de casas de banho e cozinha',
-  'Limpeza de janelas, vidros e caixilhos',
-  'Aspiração e lavagem de pavimentos',
-  'Remoção de resíduos da obra ou mudança anterior',
-]
-
-const postMoveItems = [
-  'Limpeza geral para devolução do imóvel',
-  'Remoção de resíduos e objectos deixados',
-  'Limpeza de marcas nas paredes e rodapés',
-  'Higienização completa de casas de banho',
-  'Preparação do imóvel para nova visita ou arrendamento',
-]
-
-const benefits: Benefit[] = [
-  {
-    icon: Zap,
-    title: 'Rapidez e Eficiência',
-    description:
-      'Equipa treinada que executa o trabalho no menor tempo possível, sem comprometer a qualidade.',
-  },
-  {
-    icon: Shield,
-    title: 'Produtos Certificados',
-    description:
-      'Utilizamos produtos de limpeza profissionais, seguros para crianças, animais e o meio ambiente.',
-  },
-  {
-    icon: BadgeCheck,
-    title: 'Resultado Garantido',
-    description:
-      'Se não ficou perfeito, voltamos. A sua satisfação é a nossa prioridade.',
-  },
-  {
-    icon: Calendar,
-    title: 'Agendamento Flexível',
-    description:
-      'Disponível em qualquer dia, incluindo fins de semana e feriados. Adaptamo-nos ao seu calendário.',
-  },
-]
-
-const cleaningImages = [
-  {
-    src: '/images/limpeza/clean-empty-apartment.jpeg',
-    alt: 'Apartamento vazio, luminoso e impecavelmente limpo',
-  },
-  {
-    src: '/images/limpeza/professional-cleaning-room.jpeg',
-    alt: 'Profissional a limpar uma sala luminosa',
-  },
-  {
-    src: '/images/limpeza/clean-kitchen-apartment.jpeg',
-    alt: 'Cozinha de apartamento limpa e pronta a usar',
-  },
-  {
-    src: '/images/limpeza/clean-living-room.jpeg',
-    alt: 'Sala vazia com pavimento limpo e luz natural',
-  },
-  {
-    src: '/images/limpeza/clean-bathroom.jpeg',
-    alt: 'Apartamento vazio com casa de banho higienizada',
-  },
-]
-
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
@@ -106,11 +40,71 @@ const cardVariants = {
 export default function PostMoveCleaningPageClient({
   sections = {},
 }: Props) {
-  const { lang } = useLang()
+  const { lang, t } = useLang()
   const contactHref = lang === 'pt' ? '/contacto' : '/contact'
   const heroContent = lang === 'pt' ? sections.hero : {}
+  const preMoveItems = [
+    t.limpeza.preItem1,
+    t.limpeza.preItem2,
+    t.limpeza.preItem3,
+    t.limpeza.preItem4,
+    t.limpeza.preItem5,
+  ]
+  const postMoveItems = [
+    t.limpeza.postItem1,
+    t.limpeza.postItem2,
+    t.limpeza.postItem3,
+    t.limpeza.postItem4,
+    t.limpeza.postItem5,
+  ]
+  const benefits: Benefit[] = [
+    {
+      icon: Zap,
+      title: t.limpeza.why1Title,
+      description: t.limpeza.why1Desc,
+    },
+    {
+      icon: Shield,
+      title: t.limpeza.why2Title,
+      description: t.limpeza.why2Desc,
+    },
+    {
+      icon: BadgeCheck,
+      title: t.limpeza.why3Title,
+      description: t.limpeza.why3Desc,
+    },
+    {
+      icon: Calendar,
+      title: t.limpeza.why4Title,
+      description: t.limpeza.why4Desc,
+    },
+  ]
+  const cleaningImages = [
+    {
+      src: '/images/limpeza/clean-empty-apartment.jpeg',
+      alt: t.limpeza.image1Alt,
+    },
+    {
+      src: '/images/limpeza/professional-cleaning-room.jpeg',
+      alt: t.limpeza.image2Alt,
+    },
+    {
+      src: '/images/limpeza/clean-kitchen-apartment.jpeg',
+      alt: t.limpeza.image3Alt,
+    },
+    {
+      src: '/images/limpeza/clean-living-room.jpeg',
+      alt: t.limpeza.image4Alt,
+    },
+    {
+      src: '/images/limpeza/clean-bathroom.jpeg',
+      alt: t.limpeza.image5Alt,
+    },
+  ]
   const whatsappUrl =
-    'https://wa.me/447796601194?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Limpeza%20P%C3%B3s%20Mudan%C3%A7a.'
+    `https://wa.me/447796601194?text=${encodeURIComponent(
+      t.limpeza.whatsappMessage
+    )}`
 
   return (
     <>
@@ -135,7 +129,7 @@ export default function PostMoveCleaningPageClient({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
           >
-            {contentText(heroContent, 'tag', 'Limpeza Profissional')}
+            {contentText(heroContent, 'tag', t.limpeza.heroTag)}
           </motion.span>
           <motion.h1
             className="mt-6 font-heading text-4xl font-black leading-[1.02] text-white sm:text-5xl lg:text-[52px]"
@@ -146,7 +140,7 @@ export default function PostMoveCleaningPageClient({
             {contentText(
               heroContent,
               'titulo',
-              'A Sua Nova Casa, Impecável Desde o Primeiro Dia.'
+              t.limpeza.heroTitle
             )}
           </motion.h1>
           <motion.p
@@ -158,7 +152,7 @@ export default function PostMoveCleaningPageClient({
             {contentText(
               heroContent,
               'subtitulo',
-              'Antes de entrar ou depois de sair — a nossa equipa de limpeza pós mudança deixa cada divisão brilhante, higienizada e pronta a receber a sua vida.'
+              t.limpeza.heroSubtitle
             )}
           </motion.p>
         </div>
@@ -175,10 +169,10 @@ export default function PostMoveCleaningPageClient({
           >
             <Sparkles size={36} strokeWidth={1.8} />
             <h2 className="mt-6 font-heading text-3xl font-bold">
-              Limpeza Pré-Entrada
+              {t.limpeza.preTitle}
             </h2>
             <p className="mt-3 font-body text-[15px] leading-6 text-white/75">
-              Para receber a sua nova casa nas melhores condições
+              {t.limpeza.preSubtitle}
             </p>
             <ul className="mt-7 space-y-4">
               {preMoveItems.map((item) => (
@@ -195,7 +189,7 @@ export default function PostMoveCleaningPageClient({
               href={contactHref}
               className="mt-8 inline-block font-body font-medium text-white underline-offset-4 hover:underline"
             >
-              Pedir Orçamento →
+              {t.limpeza.preCta}
             </Link>
           </motion.article>
 
@@ -208,10 +202,10 @@ export default function PostMoveCleaningPageClient({
           >
             <Home size={36} strokeWidth={1.8} />
             <h2 className="mt-6 font-heading text-3xl font-bold">
-              Limpeza Pós-Saída
+              {t.limpeza.postTitle}
             </h2>
             <p className="mt-3 font-body text-[15px] leading-6 text-dark/65">
-              Deixe o espaço anterior em perfeitas condições
+              {t.limpeza.postSubtitle}
             </p>
             <ul className="mt-7 space-y-4">
               {postMoveItems.map((item) => (
@@ -231,7 +225,7 @@ export default function PostMoveCleaningPageClient({
               href={contactHref}
               className="mt-8 inline-block font-body font-medium text-accent underline-offset-4 hover:underline"
             >
-              Pedir Orçamento →
+              {t.limpeza.postCta}
             </Link>
           </motion.article>
         </div>
@@ -246,8 +240,8 @@ export default function PostMoveCleaningPageClient({
             viewport={{ once: true, margin: '-100px' }}
           >
             <SectionHeading
-              tag="Porque Escolher-nos"
-              title="Limpeza Profissional é Diferente"
+              tag={t.limpeza.whyTag}
+              title={t.limpeza.whyTitle}
               align="left"
             />
             <div className="space-y-5">
@@ -276,7 +270,7 @@ export default function PostMoveCleaningPageClient({
             </div>
             <div className="mt-9">
               <CTAButton href={contactHref} variant="primary">
-                Agendar Limpeza
+                {t.limpeza.whyCta}
               </CTAButton>
             </div>
           </motion.div>
@@ -316,7 +310,10 @@ export default function PostMoveCleaningPageClient({
       </SectionWrapper>
 
       <SectionWrapper id="resultados-limpeza" bg="white">
-        <SectionHeading tag="Resultados Reais" title="Espaços Transformados" />
+        <SectionHeading
+          tag={t.limpeza.galleryTag}
+          title={t.limpeza.galleryTitle}
+        />
         <motion.div
           className="-mx-6 flex snap-x gap-5 overflow-x-auto px-6 pb-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:overflow-visible lg:px-0"
           variants={{
@@ -358,7 +355,7 @@ export default function PostMoveCleaningPageClient({
         <div className="absolute inset-0">
           <Image
             src="/images/limpeza/clean-living-room.jpeg"
-            alt="Sala vazia, limpa e pronta para uma nova mudança"
+            alt={t.limpeza.ctaImageAlt}
             fill
             sizes="100vw"
             className="object-cover"
@@ -373,15 +370,14 @@ export default function PostMoveCleaningPageClient({
           viewport={{ once: true, margin: '-100px' }}
         >
           <h2 className="font-heading text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
-            A Sua Casa Merece um Começo Impecável.
+            {t.limpeza.ctaTitle}
           </h2>
           <p className="mx-auto mt-5 max-w-2xl font-body text-base leading-7 text-white/80 sm:text-lg">
-            Contacte-nos hoje e receba um orçamento gratuito para limpeza pós
-            mudança.
+            {t.limpeza.ctaSubtitle}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <CTAButton href={contactHref} variant="white">
-              Pedir Orçamento Gratuito
+              {t.limpeza.ctaBtn1}
             </CTAButton>
             <CTAButton
               href={whatsappUrl}
@@ -390,7 +386,7 @@ export default function PostMoveCleaningPageClient({
               className="!border-white !text-white hover:!bg-white hover:!text-primary"
             >
               <MessageCircle size={19} />
-              Falar no WhatsApp
+              {t.limpeza.ctaBtn2}
             </CTAButton>
           </div>
         </motion.div>
